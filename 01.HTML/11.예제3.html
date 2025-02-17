@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <form action="test.do">
+    <fieldset>
+        <legend>필수항목</legend>
+            ID : <input type="text" name="ID" placeholder="ID를 입력하시오" maxlength="20" required><br><br>
+            PW : <input type="password" name="PW" placeholder="비밀번호를 입력하시오" maxlength="20" required><br><br>
+            이름 : <input type="text" name="name" placeholder="이름을 입력하시오" plrequired>
+    </fieldset><br>
+    <fieldset>
+        <legend>선택항목</legend>
+        
+            전화번호 : <input type="tel" name="전화번호"><br><br>
+            주소 : <input type="text" name="address"><br><br>
+            성별 : 
+            <input type="radio" name="gender">남
+            <input type="radio" name="gender">여 <br><br>
+            자기소개 : <textarea name="content" cols="35" rows="5"></textarea><br>
+            <input type="submit" value="전송">
+            <input type="reset" value="초기화">
+    </fieldset>
+    </form>
+</body>
+</html>
