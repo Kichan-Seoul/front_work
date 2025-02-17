@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09.하이퍼링크 관련 태그</title>
+</head>
+<body>
+    <!--
+        하이퍼링크 기능은 웹 문서의 가장 핵심적인 기능
+        클릭을 통해 연결된 곳으로 이동하여 사용을 편리하게 해주는 기능
+        텍스트를 클릭하여 링크로 이동하는 방법,
+        이미지를 클릭하여 링크로 이동하는 방법
+    -->
+    <h1>하이퍼링크 관련 태그</h1>
+    <!--a 태그의 href속성으로 링크를 만들 수 있슴-->
+    <p>&lt;a&gt;href="현재 페이지&lt;/a&gt;</p>
+    <!-- ul>(li>a)*3 -->
+    <ul>
+        <li><a href="02.글자태그.html">글자 관련 태그</a></li>
+        <li><a href="03.목록태그.html">목록 관련 태그</a></li>
+        <li><a href="05.테이블.html">표 관련 태그</a></li>
+    </ul>
+
+    <h3>* target속성 : 링크된 문서를 클릭했을 때 문서가 열릴 위치를 명시</h3>
+    <p>
+    _self(기본값) : 현재 열려있는 창에 링크가 열림<br>
+    _blank : 새탭에 링크창이 열림<br>
+    _parent : 링크된 문서를 현재 프레임의 부모 프레임에서 오픈(프레임이 없으면 현재탭)br
+    _top : 링크된 문서를 현재 윈도우 전체에서 오픈함(프레임이 없으면 현재탭)
+    </p>
+    <a href="http://google.com">구글 사이트</a>
+    <a href="http://daum.net" target="_blank">다음 사이트</a>
+
+    <h3>* 이미지에 링크 만들기</h3>
+    <a href="https://configure.bmw.co.kr/ko_KR/configure/G82/31HK/FLKKX,P0300,S01CB,S01CR,S01MB,S01U0,S0248,S02T4,S02VB,S02VC,S02VF,S0316,S0322,S03MF,S0428,S0430,S0431,S0459,S048C,S0493,S0494,S04GQ,S04MC,S04NE,S04NW,S04U0,S0534,S0548,S0552,S05AC,S05AL,S05AU,S05AV,S05DA,S05DN,S05DS,S0688,S06AC,S06AE,S06AK,S06C3,S06NX,S06PA,S06U3,S06VB,S0760,S0775,S07M9,S0802,S0867,S08AF,S08EK,S08KH,S08R9,S08S3,S08SX,S08TF,S08TR,S08WD,S08WM,S0Z51"><img src="resources/img/BMW M4.webp"></a>
+
+    <br>
+    <hr>
+
+    <h3>* 이미지 맵</h3>
+    <p>
+        이미지를 구역 별로 나누어 링크를 걸어주는 태그
+        &lt;img usemap=""&gt;
+    </p>
+    <!--
+        <img src+"이미지 url" usemap="#맵이름">
+        <map name="맵이름">
+            <area shape="모양" coords="시작위치, 끝위치" href="링크경로" target="위치">
+        </map>
+
+        shape 속성
+         - rect : 직사각형
+         - circle : 원형
+         - poly : 폴리곤 영역
+         - default : 전체
+    -->
+    <img src="resources/img/BMW M4.webp" width="500" height="300" usemap="#imgmap">
+    <map name="imgmap">
+        <area shape="rect" coords="0,0,250,300" href="http://naver.com">
+        <area shape="rect" coords="250,0,500,300" href="http://apple.com">
+    </map>
+
+    <img src="resources/img/서울특별시 행정구역.jpg" usemap="#imgmap2">
+    <map name="imgmap2">
+        <area shape="poly" coords="1450,1357,1463,1415,1547,1635,1592,1628,1612,1687,1644,1725,1670,1751,1708,1745,1734,1712,1773,1712,1818,1700,1844,1745,1882,1784,1902,1816,1940,1803,1986,1803,2011,1822,2024,1777,2011,1725,1966,1616,1902,1570,1773,1519,1734,1467,1734,1396,1663,1344,1618,1318,1528,1299,1483,1312" shape="poly" href="https://www.gangnam.go.kr/main.do">
+    </map>
+
+    <br><hr>
+
+    <h3 id="맨위">현재 페이지 내에서 점프하는 링크 만들기</h3>
+    <!-- ul>(li>a[href=#con$]{본문$})*7 -->
+    <ul>
+        <li><a href="#con1">본문1</a></li>
+        <li><a href="#con2">본문2</a></li>
+        <li><a href="#con3">본문3</a></li>
+        <li><a href="#con4">본문4</a></li>
+        <li><a href="#con5">본문5</a></li>
+        <li><a href="#con6">본문6</a></li>
+        <li><a href="#con7">본문7</a></li>
+    </ul>
+
+    <h4 id="con1">본문1</h4>
+    <p><span>Lorem ipsum dol Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magnam tempore temporibus tenetur quam saepe, sunt tempora error laborum distinctio. Dolores vel tempore quo quas! Molestiae, harum. Quia, ab e Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tenetur sit inventore debitis iure, animi esse tempora consectetur vel natus voluptatem facilis praesentium reiciendis nesciunt accusantium? Alias architecto repudiandae nihil.or, sit amet consectetur adipisicing elit. Veritatis dolorem asperiores itaque assumenda natus laborum. Vero, ratione modi quam ducimus nesciunt eveniet distinctio perferendis incidunt at veritatis officiis sed deleniti.</span></p>
+    
+    <h4 id="con2">본문2</h4>
+    <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis dolorem asperiores itaque assumenda natus laborum. Vero, ratione modi quam ducimus nesciunt eveniet distinctio perferendis incidunt at veritatis officiis sed deleniti.</span></p>
+
+    <h4 id="con3">본문3</h4>
+    <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis dolorem asperiores itaque assumenda natus laborum. Vero, ratione modi quam ducimus nesciunt eveniet distinctio perferendis incidunt at veritatis officiis sed deleniti.</span></p>
+
+    <h4 id="con4">본문4</h4>
+    <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis dolorem asperiores itaque assumenda natus laborum. Vero, ratione modi quam ducimus nesciunt eveniet distinctio perferendis incidunt at veritatis officiis sed deleniti.</span></p>
+
+    <h4 id="con5">본문5</h4>
+    <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis dolorem asperiores itaque assumenda natus laborum. Vero, ratione modi quam ducimus nesciunt eveniet distinctio perferendis incidunt at veritatis officiis sed deleniti.</span></p>
+
+    <h4 id="con6">본문6</h4>
+    <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis dolorem asperiores itaque assumenda natus laborum. Vero, ratione modi quam ducimus nesciunt eveniet distinctio perferendis incidunt at veritatis officiis sed deleniti.</span></p>
+
+    <h4 id="con7">본문7</h4>
+    <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis dolorem asperiores itaque assumenda natus laborum. Vero, ratione modi quam ducimus nesciunt eveniet distinctio perferendis incidunt at veritatis officiis sed deleniti.</span></p>
+
+    <a href="#맨위">맨 위로 올라가기</a> <br>
+    <a href="#top">TOP</a>
+    
+    
+</body>
+</html>
