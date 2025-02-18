@@ -122,6 +122,17 @@ button:disabled {
 }
 
 /* ========================= 6. 일반 구조 선택자 ========================= */
-#spring:first-child {
+#spring :first-child {
     background-color: hotpink;
+}
+#spring :last-child {
+    background-color: red;
+}
+#spring :nth-child(2) {
+    background-color: black;
+    color: white;
+}
+#spring :nth-last-child(2) {
+    color: blueviolet;
+    font-size: 20px;
 }
