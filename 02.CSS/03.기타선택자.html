@@ -110,5 +110,71 @@
     <br><br>
     <a href="http://naver.com" id="link">네이버</a>
 
+    <br><br><hr>
+
+    <h2>5. 상태 선택자</h2>
+    <p>
+        요소의 상태에 따라 선택되는 선택자
+    </p>
+    <pre>
+        1) 체크된(checked) 상태의 요소내
+            선택자:checked {
+                스타일속성:값;
+            }
+    </pre>
+
+    <input type="checkbox" id="apple">
+    <label for="apple">사과</label> &emsp;
+
+    <input type="checkbox" id="banana">
+    <label for="banana">바나나</label>
+
+    <pre>
+        2) 초점(focus)가 맞춰진 input요소
+           선택자:focus {
+                스타일속성:값;
+            }
+    </pre>
+    아이디 : <input name="userID"><br>
+    비밀번호 : <input type="password" name="userPW">
+
+    <pre>
+        3) 활성화(enabled)가 되어있는 요소
+           선택자:enabled {
+                스타일속성:값;
+            }
+        4) 비활성화(disabled)가 되어있는 요소
+            선택자:disabled {
+                 스타일속성:값;
+             }
+    </pre>
+
+    <button>클릭가능</button>
+    <button disabled>클릭불가능</button>
+
+    <br><br><hr>
+
+    <h2>6. 일반 구조 선택자</h2>
+    <p>
+        특정한 위치에 있는 태그를 선택하는 선택자(일반적으로 자손, 후손 선택자와 함께 사용)
+    </p>
+    <pre>
+        :first-child             ->형제 관계 태그 중 첫번째 태그 선택
+        :last_child              ->형제 관계 태그 중 마지막 태그 선택
+        :nth-child(수열)         ->형제 관계 태그 중 앞에서 수열 몇 번째 태그 선택
+        :nth-last child(수열)    ->형제 관계 태그 중 뒤에서 수열 몇 번째 태그 선택
+    </pre>
+
+    <!-- #spring>p{봄$}*5 -->
+    <div id="spring">
+        <p>봄1</p>
+        <p>봄2</p>
+        <p>봄3</p>
+        <p>봄4</p>
+        <p>봄5</p>
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+
 </body>
 </html>

@@ -96,3 +96,32 @@ div[name*=name4] {
 #link:visited {
     color: red;
 }
+
+/* ========================= 5. 선택 선택자 ========================= */
+input[type=checkbox]:checked {
+    width: 30px;
+    height: 30px;
+}
+
+input[type=checkbox]:checked+label {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+}
+
+input[name^=user]:focus {
+    background-color: pink;
+}
+
+button:enabled {
+    background-color: hotpink;
+}
+button:disabled {
+    background-color: lightblue;
+    color: red;
+}
+
+/* ========================= 6. 일반 구조 선택자 ========================= */
+#spring:first-child {
+    background-color: hotpink;
+}
