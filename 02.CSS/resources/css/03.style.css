@@ -132,7 +132,34 @@ button:disabled {
     background-color: black;
     color: white;
 }
+#spring :nth-child(2n) { /*짝수번째*/
+    font-size: 20px;
+}
+#spring :nth-child(2n+1) { /*홀수번째*/
+    color: bisque;
+}
 #spring :nth-last-child(2) {
     color: blueviolet;
+}
+
+/* ========================= 7. 형제 구조 선택자 ========================= */
+#summer p:first-of-type {
+    background-color: lightgreen;
+}
+#summer p:last-of-type {
     font-size: 20px;
+}
+#summer div:nth-of-type(3) {
+    background-color: brown;
+}
+#summer p:nth-last-of-type(2) {
+    color: red;
+}
+#summer p:nth-of-type(2n+1) {
+    color: blue;
+}
+
+/* ========================= 8. 부정 선택자 ========================= */
+#fall :not(p:first-of-type) {
+    color: brown;
 }
