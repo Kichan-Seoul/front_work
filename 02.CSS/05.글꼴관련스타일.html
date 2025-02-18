@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글꼴 관련 스타일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shafarik&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>글꼴 관련 스타일 속성(font)</h1>
+    <h3>font-family : 글꼴 지정</h3>
+    <pre>
+        선택자 {
+            font-family: 글꼴명;
+        }
+    </pre>
+    <!-- p#ff${글꼴테스트$}*3 -->
+    <p id="ff1">글꼴테스트1</p>
+    <p id="ff2">글꼴테스트2</p>
+    <p id="ff3">글꼴테스트3</p>
+
+    <style>
+        #ff1 {
+            font-family: 궁서체, Arial, Helvetica, sans-serif;
+        }
+        #ff2 {
+            font-family: 바탕체;
+        }
+        #ff3 {
+            font-family: 맑은 고딕;
+        }
+    </style>
+
+    <h3>* 외부 웹 폰트 사용</h3>
+    <p>
+        구글 폰트 사용<br>
+        <a href="https://fonts.google.com/" target="_blank">구글 웹 폰트</a>
+    </p>
+
+    <!-- p#google${lorem5}*3 -->
+    <p id="google1">lorem5</p>
+    <p id="google2">lorem5</p>
+    <p id="google3">lorem5</p>
+    <style>
+         #google1 {font-family: "Shafarik", serif;}
+    </style>
+
+    <h3>* 글꼴의 크기</h3>
+    <pre>
+        선택자{ font-size:크기(px|em|%) }
+    </pre>
+    
+    <!-- ul>li#fs$*3 -->
+    <ul>
+        <li id="fs1">고정크기 px텍스트</li>
+        <li id="fs2">가변크기 %테스트</li>
+        <li id="fs3">가변크기 em테스트</li>
+    </ul>
+
+    <style>
+        #fs1 {
+            font-size: 30px;
+        }
+        #fs2 {
+            font-size: 200%; /*부모의 글꼴 크기의 상대적인 크기*/
+        }
+        #fs3 {
+            font-size : 2em /*부모의 글꼴 크기의 2배(기본글꼴들은 16px)*/
+        }
+    </style>
+
+</body>
+</html>
