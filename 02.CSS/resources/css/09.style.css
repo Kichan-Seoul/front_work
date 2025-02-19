@@ -1,0 +1,89 @@
+div {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border-width: 3px;
+}
+#test1 {
+    border-style: dotted;
+    border-top-width: 10px;
+}
+#test2 {
+    box-shadow: 5px 5px 10px 5px gray;
+}
+#test3 {
+    border-style: dashed double solid dotted;
+    border-width: 5px;
+}
+#test4 {
+    border-style: dashed;
+    border-left-color: red;
+}
+#test5 {
+    border-style: groove;
+    border-width: 10px;
+}
+#test6 {
+    border-width: 10px;
+    border-style: ridge;
+}
+#test7 {
+    border-width: 10px;
+    border-style: inset;
+}
+#test8 {
+    border-width: 10px;
+    border-style: outset;
+}
+#test9 {
+    border-style: solid;
+    border-radius: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+#test10 {
+    border: 5px dotted pink;
+}
+#btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: hotpink;
+    color: white;
+}
+#btn:hover {
+    background-color: white;
+    color: hotpink;
+}
+#ID {
+    border: 1px solid;
+    width: 100px;
+    height: 5px;
+}
+#PW {
+    border: 1px solid;
+    width: 100px;
+    height: 5px;
+}
+#lorem {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 15px;
+    border: 1px solid;
+    padding: 10px 20px 30px;
+}
+#bt2 {
+    border-radius: 5px;
+    background-color: hotpink;
+    color: white;
+    border: 1px solid;
+}
+#bt2:focus {
+    background-color: white;
+    color: black;
+}
+#bt2:hover {
+    background-color: brown;
+}
