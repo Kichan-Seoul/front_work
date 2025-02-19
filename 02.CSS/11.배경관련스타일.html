@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/11.style.css">
+    <title>배경관련스타일</title>
+</head>
+<body>
+    <h1>배경 관련 스타일(background~)</h1>
+
+    <h3>background-color : 배경색 지정</h3>
+
+    <div id="div-bg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, molestias soluta. Sequi adipisci consequatur nihil blanditiis et fugit beatae explicabo at magni alias quo, aliquid, distinctio saepe aperiam vero officia.</div>
+    
+    <h3>background-clip : 배경을 적용시키는 범위 지정</h3>
+    <pre>
+        선택자 {
+            background-clip : border-box(기본값)|padding-box|content-box
+        }
+    </pre>
+
+    <div class="div-test" id="ediv1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rerum assumenda tempora quaerat debitis, ut ipsam expedita repudiandae soluta consectetur fuga, nobis sed accusantium deleniti iste repellat nam laboriosam asperiores.</div>
+    <div class="div-test" id="ediv2">Expedita nostrum ducimus illum quibusdam omnis nisi, laudantium aliquid quia hic id nulla cum incidunt quo corrupti sequi debitis provident velit voluptate. Ipsum nihil distinctio possimus quos eum tempora blanditiis?</div>
+    <div class="div-test" id="ediv3">Autem deserunt atque alias ut cum magni explicabo. Voluptas dicta atque laborum cupiditate delectus itaque, veritatis accusantium asperiores voluptatem explicabo. Cupiditate praesentium optio aspernatur nulla ea ducimus hic aut numquam.</div>
+
+
+    <h3>background-image : 배경에 이미지 넣기</h3>
+    <pre>
+        선택자 {
+            background-image : url("이미지 경로");
+            background-repeat : repeat|repeat-x|repeat-y|no-repeat
+            background-size : auto|contain|cover|px px|% %;
+            background-position : 좌/우/가운데 위/아래/가운데|px px|% %;
+            backgroung-attachment : scroll|fixed
+        }
+    </pre>
+
+    <div id="bg-img"></div>
+
+    <br>
+</body>
+</html>
