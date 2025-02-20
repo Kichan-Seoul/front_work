@@ -1,0 +1,23 @@
+body {
+    width: 100%;
+}
+
+header {
+    height: 60px;
+    line-height: 60px;
+}
+
+section {
+    height: 500px;
+    background-color: blue;
+}
+aside {
+    height: 200px;
+    background-color: skyblue;
+}
+
+footer {
+    clear: both;
+    height: 30px;
+    line-height: 30px;
+} 
