@@ -1,0 +1,25 @@
+body {
+    width: 1000px;
+}
+
+header {
+    height: 80px;
+    line-height: 80px;
+}
+
+section {
+    float: left;
+    width: 700px;
+    height: 500px;
+    background-color: pink;
+}
+aside {
+    float: right;
+    width: 30%;
+    height: 500px;
+    background-color: rgb(228, 144, 158);
+}
+
+footer {
+    clear: both;
+}
