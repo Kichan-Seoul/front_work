@@ -39,12 +39,17 @@ header {
 /* 본문 */
 section {
     float: left;
-    width: 65%px;
+    width: 650px;
+    height: 600px;
     
 }
 aside {
     float: right;
-    width: 34%;
+    width: 340px;
+}
+aside img {
+    width: 340px;
+    height: 200px;
 }
 footer {
     clear: both;
