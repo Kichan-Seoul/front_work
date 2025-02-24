@@ -179,6 +179,78 @@
 
     </script>
 
+    <br><hr>
+
+    <h3>4. 변수 = 선택한input요소.value;</h3>
+    
+    아이디 : <input id ="userId"><br>
+    비밀번호 : <input type="password" id="userPW"><br>
+
+    <div id="are5"></div>
+
+    <button onclick="testInput()">로그인</button>
+
+    <script>
+        function testInput() {
+            var id = document.getElementById('userId');
+            var pw = document.getElementById('userPW');
+
+           // console.log(id); // 객체
+            console.log(id.value); // input안에 넣은 값 가져오기
+            console.log(pw.value);
+            
+
+            var idValue = id.value;
+            var pwValue = pw.value;
+            
+            document.getElementById('are5').value = idValue + ', ' + pwValue;
+            
+        }
+    </script>
+
+    <br><hr>
+
+    <!-- 1. prompt 사용
+    2. input 태그 사용
+
+    이름, 나이, 주소를 입력받아 div 안에 출력 -->
+
+    <button onclick="putta()">입력하기</button><br>
+    <div id="puutt"></div>
+
+    <script>
+        function putta() {
+            var name2 = prompt("이름을 입력하십시오.");
+            var age2 = prompt("나이를 입력하십시오");
+            var address2 = prompt("주소를 입력하십시오(동 까지).");
+
+            var asdf = document.getElementById('puutt');
+
+            asdf.innerHTML = "이름 : " + name2 + "<br>나이 : " + age2 + "<br>주소 : " + address2;
+        }
+    </script>
+
+    <hr>
+
+    이름 : <input id="name" placeholder="이름을 입력하십시오."><br>
+    나이 : <input id="age" placeholder="나이를 입력하십시오."><br>
+    주소 : <input id="address" placeholder="주소를 입력하십시오(동 까지)"><br>
+    <button onclick="Summary()">확인</button><br><br>
+    <div id="info"></div>
+
+    <script>
+        function Summary() {
+            var name1 = document.getElementById('name');
+            var age1 = document.getElementById('age');
+            var address1 = document.getElementById('address');
+
+            console.log(name1);
+            console.log(name1.value);
+            
+            info.innerHTML = "이름 : " + name1.value + "<br>나이 : " + age1.value + "<br>주소 : " + address1.value;
+        }
+    </script>
+
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
