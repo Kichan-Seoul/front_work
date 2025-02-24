@@ -100,14 +100,85 @@
     </p>
 
     <button onclick="testConfirm()">클릭</button>
+    <div id="area2"></div>
 
     <script>
         function testConfirm() {
-            var result1 = confirm("배고프면 확인, 아니면 취소를 누르세요");
+            var result1 = confirm("Is Java funny?");
 
             console.log(result1);
             //window.alert(result1);
+
+            if (result1) {
+                console.log("Funny")
+            } else {
+                console.log("Not funny");
+            }
+
+            var divEl2 = document.getElementById('area2');
+            if (result1) {
+                divEl2.innerHTML = "<h3>엄청 재미있어요</h3>"
+            } else {
+                divEl2.innerHTML = "<h3>개노잼이에요</h3>"
+            }
         }
     </script>
+
+    <br><hr>
+
+    <h3>2. [window.]prompt("질문내용");</h3>
+    <p>
+        prompt호출시 "질문내용"과 입력할 수 있는 "텍스트상자"와 "확인/취소" 버튼이 보여지는 알림창 발생<br>
+        확인 버튼 클릭시 텍스트상자에 입력된 값이 문자열로 반환<br>
+        취소 버튼 클릭시 null값 반환
+    </p>
+
+    <button onclick="testPrompt()">클릭</button>
+    <div id="area3"></div>
+
+    <script>
+        function testPrompt() {
+            var name = prompt("이름을 입력하시오");
+            var age = prompt("나이를 입력하시오.");
+
+            console.log(name);
+
+            var divPR2 = document.getElementById('area3');
+            divPR2.innerHTML = "<b>" + name + "</b>" + "님의 나이는 " + "<b>" + age + "</b>" + "살 입니다."
+            
+        }
+    </script>
+
+    <br><hr>
+
+    <button onclick="testPrompt2()">숫자만 입력</button>
+
+    <ul id="area4">
+
+    </ul>
+
+    <script>
+        function testPrompt2() {
+            //사용자가 넣은 값(예.5)만큼 반복문 실행
+            var num = prompt("숫자만 입력하시오.");
+            var ulEle4 = document.getElementById('area4');
+
+            /* 맨 마지막 목록5 하나만 나옴
+            for(var i=1; i<=num; i++) {
+            ulEle4.innerHTML = "<li>목록" + i + "</li>";
+            }
+            */
+
+            var str = "";
+            for(var i=1; i<=num; i++) {
+                str += "<li>목록" + i + "</li>";
+            
+            }
+            ulEle4.innerHTML = str;
+        }
+
+    </script>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
