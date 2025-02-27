@@ -162,6 +162,20 @@
             // 요소와 텍스트 결합
             eleNode.appendChild(textNode);
             console.log(eleNode);
+            document.getElementById('div4').appendChild(eleNode);
+        }
+    </script>
+
+    <h4>- 텍스트노드가 존재하지 않는 노드 생성(시작태그)</h4>
+    <button onclick="test5()">요소 생성</button>
+    <div id="div5"></div>
+
+    <script>
+        function test5() {
+            let img1 = document.createElement('img'); // <img>
+
+            img1.src = '이미지 주소';
+            img1.alt = '로고';
             
         }
     </script>
