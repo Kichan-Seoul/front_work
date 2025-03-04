@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <title>요소선택자(추가적선택자)</title>
+    <style>
+        .test {
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 <body>
     <h3>* 자손석택자(>)와 후손선택자( )</h3>
@@ -106,7 +111,100 @@
             $(':submit').click(()=>{
                 alert('안녕');
             });
+
+            // // mouseenter : 선택된 요소의 경계 내부로 마우스가 들어가는 순간 발생하는 이벤트
+            // $(':submit').mouseenter(function () {
+            //     // $(this).css({backgroundColor:'purple'});
+
+            //     $(this).addClass('test');
+            // })
+
+            // // mouseout : 선택된 요소의 경계 외부로 마우스가 나갈 때
+            // $(':submit').mouseout(function () {
+            //     $(this).removeClass('test');
+            // })
+
+            // hover = mouseenter + mouseout
+            $(':submit').hover(function() {
+                $(this).addClass('test');
+            }, function() {
+                $(this).removeClass('test');
+            });
         })
     </script>
+
+    <hr>
+
+    <h3>* 상태(checked, selected, disabled, enabled)선택자</h3>
+
+    <h4>- checked 상태 선택자(radio, checkbox)</h4>
+
+    취미 : 
+    <input type="checkbox" name="hobby" value="game">게임&emsp;
+    <input type="checkbox" name="hobby" value="movie">영화&emsp;
+    <input type="checkbox" name="hobby" value="music">음악&emsp;
+    <br>
+
+    <button type="button" id="btn">confirm</button>
+
+    <script>
+        $(()=>{
+            // $('#btn').click(function() {
+            //     $('input:checked').css({width:'50px',height:'50px'})
+            // });
+
+            //change : checkbox요소들이 바뀌는 이벤트가 발생시
+            $(':checkbox').change(function() {
+                // prop('checked') : 체크했으면 true반환, 해제시 false반환
+                console.log($(this).prop('checked'));
+                
+                if($(this).prop('checked')) {
+                    $(this).css({width:'50px',height:'50px'});
+                } else {
+                    $(this).css({width:'',height:''});
+                }
+            })
+        })
+    </script>
+
+    <br><br>
+
+    <h4>- selected 상태 선택자(select>option)</h4>
+    국적 : 
+    <select name="national">
+        <option value="x">선택안함</option>
+        <option value="kor">대한민국</option>
+        <option value="usa">미국</option>
+        <option value="uk">영국</option>
+    </select>
+
+    <button type="button" onclick="test();">confirm</button>
+    <br>
+
+    선택한 나라 : <span id="result">선택안함</span>
+
+    <script>
+        function test() {
+            console.log($('option:selected').val());
+            console.log($('option:selected').html());
+            
+            $('#result').html($('option:selected').html());
+        }
+    </script>
+
+    <br><br>
+
+    <h4>- disabled, enabled 상태 선택자(input요소들, button등)</h4>
+
+    <button type="button">활성화버튼</button>
+    <button type="button" disabled>비활성화버튼</button>
+
+    <script>
+        $(()=>{
+            $('button:enabled').css('backgroundColor', 'yellowgreen');
+            $('button:disabled').css('backgroundColor', 'orange');
+        })
+    </script>
+
 </body>
 </html>
