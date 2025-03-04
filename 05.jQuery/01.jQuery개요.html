@@ -73,8 +73,36 @@
     </p>
 
     <script>
-        window.onload = () => console.log('window.onload 구문실행됨');
+        window.onload = () => console.log('window.onload 구문1실행됨');
+
+        window.onload = () => console.log('window.onload 구문2실행됨');
+
+        jQuery(document).ready(function () {
+           console.log('jQuery(document).ready 구문 실행됨');
+        });
+        $(document).ready(function () {
+            console.log('$(document).ready 구문 실행됨'); 
+        });
+        $(function () {
+            console.log('$(function () 구문 실행됨');
+
+            // 자바스크립트 방식
+            // const h3Arr = document.getElementsByTagName('h3');
+            // for(let i in h3Arr) {
+            //     h3Arr[i].style.backgroundColor='hotpink';
+            // }
+
+            // jQuery 방식
+            /*
+                $('선택자(해당요소 선택)').css(스타일 기능 수행)
+            */
+            $('h3').css('backgroundColor', 'pink');
+
+            $('#test').css('color', 'blue');
+        });
         
     </script>
+
+    <div id="test">어쩔티비</div>
 </body>
 </html>
